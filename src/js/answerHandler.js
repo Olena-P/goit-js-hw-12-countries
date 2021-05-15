@@ -4,7 +4,7 @@ import fetchCountries from './fetchCountries.js';
 import refs from './refs.js';
 import alerts from './alert.js';
 
-function responseHandlerInput(input) {
+function answerHandlerInput(input) {
   fetchCountries(input).then(array => {
     if (array.length === undefined) {
       alerts.errorNotFound();
@@ -17,4 +17,4 @@ function responseHandlerInput(input) {
     }
   });
 }
-export default responseHandlerInput;
+export default answerHandlerInput;
