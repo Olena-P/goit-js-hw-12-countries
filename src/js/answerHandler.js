@@ -6,7 +6,7 @@ import alerts from './alert.js';
 
 function answerHandlerInput(input) {
   fetchCountries(input).then(array => {
-    if (array.length === undefined) {
+    if (array === undefined) {
       alerts.errorNotFound();
     } else if (array.length > 10) {
       alerts.errorManyResults();
