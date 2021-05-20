@@ -1,7 +1,7 @@
 import refs from './refs.js';
 
 function fetchCountries(countryName) {
-  refs.div.innerHTML = '';
+  clearDiv();
   return fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
     .then(response => {
       if (response.ok) {
@@ -9,6 +9,10 @@ function fetchCountries(countryName) {
       }
     })
     .catch(error => console.log(error));
+}
+
+function clearDiv() {
+  refs.div.innerHTML = '';
 }
 
 export default fetchCountries;
